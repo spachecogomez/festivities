@@ -36,13 +36,13 @@ public class FestivitiesJsonController {
         f.setStartDate(new Date());
         f.setEndDate(new Date());
         f.setName(nombre);
-        f.setPlaceCelebrated("Colombia");
+        f.setPlace("Colombia");
         list.add(f);
         Festivity f1 = new Festivity();
         f1.setStartDate(new Date());
         f1.setEndDate(new Date());
         f1.setName(nombre);
-        f1.setPlaceCelebrated("Colombia");
+        f1.setPlace("Colombia");
         list.add(f1);
         return list;
     }

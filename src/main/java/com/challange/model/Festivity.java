@@ -5,17 +5,19 @@
  */
 package com.challange.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.util.Date;
+import org.springframework.data.annotation.Id;
 
 /**
  *
- * Class used to represent a festivity 
- * 
  * @author sebpache
- * @version 1.0
- * @since Oct 28 , 2015
  */
-public class Festivity {
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class Festivity{
+    
+    @Id
+    private String _id;
     
     private String name;
     
@@ -23,7 +25,7 @@ public class Festivity {
     
     private Date endDate;
     
-    private String placeCelebrated;
+    private String place;
 
     /**
      * @return the name
@@ -68,17 +70,17 @@ public class Festivity {
     }
 
     /**
-     * @return the placeCelebrated
+     * @return the place
      */
-    public String getPlaceCelebrated() {
-        return placeCelebrated;
+    public String getPlace() {
+        return place;
     }
 
     /**
-     * @param placeCelebrated the placeCelebrated to set
+     * @param place the place to set
      */
-    public void setPlaceCelebrated(String placeCelebrated) {
-        this.placeCelebrated = placeCelebrated;
-    }  
+    public void setPlace(String place) {
+        this.place = place;
+    }
     
 }
